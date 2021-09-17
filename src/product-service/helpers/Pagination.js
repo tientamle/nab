@@ -2,6 +2,7 @@
 const getPagination = (page, size) => {
   page = Math.abs(page);
   size = Math.abs(size);
+  page = page ? page : 1;
   const limit = size ? +size : 10;
   const offset = page ? (page * limit) - limit : 0;
 
